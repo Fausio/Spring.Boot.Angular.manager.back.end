@@ -27,7 +27,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/read")
-    public ResponseEntity Read() {
+    public ResponseEntity<Object> Read() {
         try {
 
             List<Employee> result = employeeService.Read();
@@ -39,7 +39,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/read/{id}")
-    public ResponseEntity Read(@PathVariable("id") Long id) throws Exception {
+    public ResponseEntity<Object> Read(@PathVariable("id") Long id) throws Exception {
         try {
 
             Employee result = employeeService.Read(id);
@@ -53,7 +53,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity Create(@RequestBody Employee model) {
+    public ResponseEntity<Object> Create(@RequestBody Employee model) {
         try {
 
             Employee result = employeeService.Create(model);
@@ -66,7 +66,7 @@ public class EmployeeController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity Update(@RequestBody Employee model) {
+    public ResponseEntity<Object> Update(@RequestBody Employee model) {
         try {
 
             employeeService.Update(model);
@@ -79,7 +79,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity Create(@PathVariable("id") Long id) {
+    public ResponseEntity<Object> Create(@PathVariable("id") Long id) {
         try {
 
             employeeService.DeleteByQueryMethod(id);
