@@ -4,6 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import fausio.domain.employeemanager.model.Employee;
 
-public interface EmployeeRepo extends JpaRepository< Employee,Long> {
-    
+public interface EmployeeRepo extends JpaRepository<Employee, Long> {
+  // query method
+    void deleteEmployeeById(Long id);
+
 }
