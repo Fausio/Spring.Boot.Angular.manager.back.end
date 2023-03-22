@@ -78,7 +78,7 @@ public class EmployeeController {
 
     }
 
-    @DeleteMapping("/Delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity Create(@PathVariable("id") Long id) {
         try {
 
