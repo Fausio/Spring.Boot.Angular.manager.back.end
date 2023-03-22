@@ -75,7 +75,7 @@ public class EmployeeService {
     public void DeleteByQueryMethod(Long Id) {
         try {
 
-            employeeRepo.deleteEmployeeById(Id);
+            employeeRepo.deleteById(Id);
 
         } catch (Exception e) {
             System.out.println("Error trying to DeleteNavite Employee: " + e.toString());
