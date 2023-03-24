@@ -1,5 +1,7 @@
 package fausio.domain.employeemanager;
 
+
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +18,8 @@ public class EmployeemanagerApplication {
 		SpringApplication.run(EmployeemanagerApplication.class, args);
 	}
 
-	@Bean //https://www.youtube.com/watch?v=Gx4iBLKLVHk&list=PLwvrYc43l1MzeA2bBYQhCWr2gvWLs9A7S&index=7
+	//https://www.youtube.com/watch?v=Gx4iBLKLVHk&list=PLwvrYc43l1MzeA2bBYQhCWr2gvWLs9A7S&index=8
+	@Bean
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
@@ -31,4 +34,6 @@ public class EmployeemanagerApplication {
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);
 	}
+	
+
 }
